@@ -136,13 +136,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void loadSlider(){
         HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
 
-        file_maps.put("Slider 1",R.drawable.slider1);
+        file_maps.put("Slider 1",R.drawable.slider);
 
-        file_maps.put("Slider 2",R.drawable.slider2);
+        file_maps.put("Slider 2",R.drawable.slider);
 
-        file_maps.put("Slider 3",R.drawable.slider3);
+        file_maps.put("Slider 3",R.drawable.slider);
 
-        file_maps.put("Slider 4", R.drawable.slider4);
+        file_maps.put("Slider 4", R.drawable.slider);
 
         for(String name : file_maps.keySet()){
             TextSliderView textSliderView = new TextSliderView(this);
