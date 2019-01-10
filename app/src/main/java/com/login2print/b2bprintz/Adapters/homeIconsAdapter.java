@@ -1,4 +1,4 @@
-package com.login2print.b2bprintz;
+package com.login2print.b2bprintz.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.facebook.rebound.SimpleSpringListener;
 import com.facebook.rebound.Spring;
 import com.facebook.rebound.SpringSystem;
+import com.login2print.b2bprintz.R;
 import com.squareup.picasso.Picasso;
 
 import java.lang.ref.WeakReference;
@@ -97,14 +98,48 @@ public class homeIconsAdapter extends BaseAdapter {
         }
 
         picture = (ImageView) v.getTag(R.id.picture);
-        name = (TextView) v.getTag(R.id.text);
+        //name = (TextView) v.getTag(R.id.text);
         frame = (FrameLayout) v.getTag(R.id.frame);
 
         Item item = getItem(i);
 
-        name.setText(item.name);
+        //name.setText(item.name);
         //frame.setBackgroundColor(Color.parseColor(item.bgColor));
-        Picasso.with(mContext).load(item.drawableId).into(picture);
+        Picasso.with(mContext).load(R.mipmap.ic_launcher).into(picture);
+        switch(i){
+            case 0:
+                Picasso.with(mContext).load(R.drawable.order).into(picture);
+                break;
+            case 1:
+                Picasso.with(mContext).load(R.drawable.neworder).into(picture);
+                break;
+            case 2:
+                //Picasso.with(mContext).load(R.drawable.web_browser).into(picture);
+                Picasso.with(mContext).load(R.drawable.cancelledorder).into(picture);
+                break;
+            case 3:
+                Picasso.with(mContext).load(R.drawable.paymentpending).into(picture);
+                break;
+            case 4:
+                Picasso.with(mContext).load(R.drawable.paymenttickets).into(picture);
+                //Picasso.with(mContext).load(R.drawable.personal_info).into(picture);
+                break;
+            case 5:
+                Picasso.with(mContext).load(R.drawable.cancelledtickets).into(picture);
+                //Picasso.with(mContext).load(R.drawable.photo_capture).into(picture);
+                break;
+            case 6:
+                Picasso.with(mContext).load(R.drawable.notifications).into(picture);
+                break;
+            case 7:
+                Picasso.with(mContext).load(R.drawable.cashback).into(picture);
+                break;
+            case 8:
+                Picasso.with(mContext).load(R.drawable.profile).into(picture);
+                break;
+
+
+        }
         final SpringSystem springSystem = SpringSystem.create();
         spring =  springSystem.createSpring();
 

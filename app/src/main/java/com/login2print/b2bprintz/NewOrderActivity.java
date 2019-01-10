@@ -2,18 +2,21 @@ package com.login2print.b2bprintz;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -23,18 +26,18 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.login2print.b2bprintz.Adapters.homeIconsAdapter;
+import com.login2print.b2bprintz.Adapters.newOrderIconsAdapter;
 
 import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
+public class NewOrderActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private SliderLayout mDemoSlider;
     private GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_new_order);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -47,12 +50,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             e.printStackTrace();
         }
         startActivity(i);*/
-        getSupportActionBar().setIcon(R.drawable.logo);
-
-        mDemoSlider = (SliderLayout)findViewById(R.id.slider);
+        //getSupportActionBar().setIcon(R.drawable.logo);
 
         gridView = (GridView) findViewById(R.id.grid_view);
-        gridView.setAdapter(new homeIconsAdapter(this));
+        gridView.setAdapter(new newOrderIconsAdapter(this));
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -73,7 +74,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        loadSlider();
     }
 
     @Override
@@ -128,10 +128,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-       if(id == R.id.profile){
-           Intent profileIntent = new Intent(this, Profile1Activity.class);
-           startActivity(profileIntent);
-       }
+        if(id == R.id.profile){
+            Intent profileIntent = new Intent(this, Profile1Activity.class);
+            startActivity(profileIntent);
+        }
 
        /* if (id == R.id.nav_camera) {
             // Handle the camera action
@@ -153,67 +153,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    private void loadSlider(){
-        HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
 
-        file_maps.put("Slider 1",R.drawable.slider);
-
-        file_maps.put("Slider 2",R.drawable.slider);
-
-        file_maps.put("Slider 3",R.drawable.slider);
-
-        file_maps.put("Slider 4", R.drawable.slider);
-
-        for(String name : file_maps.keySet()){
-            TextSliderView textSliderView = new TextSliderView(this);
-            // initialize a SliderLayout
-            textSliderView
-                    .description(name)
-                    .image(file_maps.get(name))
-                    .setScaleType(BaseSliderView.ScaleType.Fit)
-                    .setOnSliderClickListener(this);
-
-            //add your extra information
-            textSliderView.bundle(new Bundle());
-            textSliderView.getBundle()
-                    .putString("extra",name);
-
-            mDemoSlider.addSlider(textSliderView);
-        }
-        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
-        mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
-        mDemoSlider.setCustomAnimation(new DescriptionAnimation());
-        mDemoSlider.setDuration(4000);
-        mDemoSlider.addOnPageChangeListener(this);
-    }
-
-
-    @Override
-    protected void onStop() {
-
-        mDemoSlider.stopAutoCycle();
-
-        super.onStop();
-    }
-
-    @Override
-    public void onSliderClick(BaseSliderView slider) {
-
-        Toast.makeText(this,slider.getBundle().get("extra") + "", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
-
-    @Override
-    public void onPageSelected(int position) {
-
-        Log.d("Slider Demo", "Page Changed: " + position);
-
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state) {
-
-    }
 }
