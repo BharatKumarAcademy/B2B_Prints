@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,7 +14,7 @@
     <com.daimajia.slider.library.SliderLayout
         android:id="@+id/slider"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
         />
 
     <GridView
@@ -27,15 +27,20 @@
         android:verticalSpacing="2dp"
         android:layout_marginBottom="50dp"
         android:gravity="center"
+        android:layout_below="@+id/slider"
+        android:layout_above="@+id/navigation"
         android:stretchMode="columnWidth" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
+
         android:background="?android:attr/windowBackground"
         app:menu="@menu/navigation" />
 
-</LinearLayout>
+
+</RelativeLayout>
