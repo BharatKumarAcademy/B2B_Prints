@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">B2BPrintz</string>
+    <string name="gridCols">3</string>
+    <string name="gridColsNewOrder">2</string>
+    <string name="ShowSplash">true</string>
+    <integer name="SplashHoldTime">2500</integer>
+
+    <string-array name="homeIconsImages">
+        <item>order</item>
+        <item>neworder</item>
+        <item>cancelorder</item>
+        <item>paymentpending</item>
+        <item>paymenttickets</item>
+        <item>cancelledtickets</item>
+        <item>notifications</item>
+        <item>cashback</item>
+        <item>profile</item>
+    </string-array>
+
+
+    <string-array name="newOrderIconsImages">
+        <item>visitingcards_icon</item>
+        <item>envelopes_icon</item>
+        <item>pamphlet_icon</item>
+        <item>letterheads_icon</item>
+        <item>invitations_icon</item>
+        <item>brochure_icon</item>
+    </string-array>
+
+    <string-array name="newOrderActivities">
+        <item>VisitingCardsActivity</item>
+        <item>EnvelopesActivity</item>
+        <item>PamphletActivity</item>
+        <item>LetterHeadsActivity</item>
+        <item>InvitationsActivity</item>
+        <item>BrochureActivity</item>
+    </string-array>
+
+    <string-array name="homeIconsTitle">
+        <item>Messages</item>
+        <item>New Orders</item>
+        <item>Payment Pendings</item>
+        <item>Cancelled Orders</item>
+        <item>New Payment Tickets</item>
+        <item>Cancelled Tickets</item>
+        <item>CashBacks</item>
+        <item>CashBacks</item>
+        <item>CashBacks</item>
+    </string-array>
+
+    <string-array name="homeIconsActivities">
+        <item>OrdersActivity</item>
+        <item>NewOrderActivity</item>
+        <item>BottomNaviActivity</item>
+        <item>BottomNaviActivity</item>
+        <item>BottomNaviActivity</item>
+        <item>BottomNaviActivity</item>
+        <item>BottomNaviActivity</item>
+        <item>BottomNaviActivity</item>
+        <item>BottomNaviActivity</item>
+    </string-array>
+
+
+    <string-array name="homeIconsBGColor">
+        <item>#FB5793</item>
+        <item>#FF9B69</item>
+        <item>#FCCF4A</item>
+        <item>#8BB93C</item>
+        <item>#3CB99A</item>
+        <item>#3C78B9</item>
+        <item>#9D52FF</item>
+        <item>#8BB93C</item>
+        <item>#8BB93C</item>
+    </string-array>
+    <string name="title_activity_inner">B2B Prints</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_title">B2B Prints</string>
+    <string name="nav_header_subtitle">care.printerschoice@gmail.com</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_bottom_navi">BottomNaviActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
