@@ -51,13 +51,13 @@
     <string-array name="homeIconsActivities">
         <item>OrdersActivity</item>
         <item>NewOrderActivity</item>
-        <item>BottomNaviActivity</item>
-        <item>BottomNaviActivity</item>
-        <item>BottomNaviActivity</item>
-        <item>BottomNaviActivity</item>
-        <item>BottomNaviActivity</item>
-        <item>BottomNaviActivity</item>
-        <item>BottomNaviActivity</item>
+        <item>NewOrderActivity</item>
+        <item>NewOrderActivity</item>
+        <item>NewOrderActivity</item>
+        <item>NewOrderActivity</item>
+        <item>NewOrderActivity</item>
+        <item>NewOrderActivity</item>
+        <item>NewOrderActivity</item>
     </string-array>
 
 
