@@ -1,20 +1,40 @@
 <resources>
     <string name="app_name">B2BPrintz</string>
-    <string name="gridCols">3</string>
+    <string name="gridCols">2</string>
     <string name="gridColsNewOrder">2</string>
     <string name="ShowSplash">true</string>
     <integer name="SplashHoldTime">2500</integer>
 
     <string-array name="homeIconsImages">
-        <item>order</item>
-        <item>neworder</item>
-        <item>cancelorder</item>
-        <item>paymentpending</item>
-        <item>paymenttickets</item>
-        <item>cancelledtickets</item>
-        <item>notifications</item>
-        <item>cashback</item>
-        <item>profile</item>
+        <item>cashback_home_icon</item>
+        <item>filepending_home_icon</item>
+        <item>outstandingbalance_home_icon</item>
+        <item>notifications_home_icon</item>
+    </string-array>
+
+    <string-array name="homeIconsActivities">
+        <item>CashBackActivity</item>
+        <item>OrdersFilePendingActivity</item>
+        <item>OrdersFilePendingActivity</item>
+        <item>NotificationsActivity</item>
+    </string-array>
+
+    <string-array name="orderIconsImages">
+        <item>order_filepending_icon</item>
+        <item>order_paymentpending_icon</item>
+        <item>order_cancelled_icon</item>
+        <item>order_inprocess_icon</item>
+        <item>order_neworder_icon</item>
+        <item>order_delivered_icon</item>
+    </string-array>
+
+    <string-array name="orderIconsActivities">
+        <item>OrdersFilePendingActivity</item>
+        <item>OrdersPaymentPendingActivity</item>
+        <item>OrdersCancelledActivity</item>
+        <item>OrdersInProcessActivity</item>
+        <item>NewOrderActivity</item>
+        <item>OrdersDeliveredActivity</item>
     </string-array>
 
 
@@ -27,7 +47,7 @@
         <item>brochure_icon</item>
     </string-array>
 
-    <string-array name="newOrderActivities">
+    <string-array name="newOrderIconsActivities">
         <item>VisitingCardsActivity</item>
         <item>EnvelopesActivity</item>
         <item>PamphletActivity</item>
@@ -48,17 +68,7 @@
         <item>CashBacks</item>
     </string-array>
 
-    <string-array name="homeIconsActivities">
-        <item>OrdersActivity</item>
-        <item>NewOrderActivity</item>
-        <item>NewOrderActivity</item>
-        <item>NewOrderActivity</item>
-        <item>NewOrderActivity</item>
-        <item>NewOrderActivity</item>
-        <item>NewOrderActivity</item>
-        <item>NewOrderActivity</item>
-        <item>NewOrderActivity</item>
-    </string-array>
+
 
 
     <string-array name="homeIconsBGColor">
@@ -85,4 +95,111 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_payments">Payments</string>
+    <string name="title_activity_transactions">Transactions</string>
+    <string name="title_activity_pricelist">Pricelist</string>
+    <string name="title_activity_cashback">Cashback</string>
+    <string name="title_activity_notifications">Notifications</string>
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+
+
+
+    <string name="SmsSenderID">BT-PRNTCH</string>
+
+
+    <string name="spinner_title">Select State</string>
+    <string name="InvalidOTPMsg">Invalid OTP?</string>
+    <string name="ExpiredOTPMsg">OTP Expired...? Please Re Enter Mobile...</string>
+    <string name="NoRecordsFoundMsg">No Records Found!...</string>
+    <string name="NoReviewsFoundMsg">No Reviews Found!...</string>
+    <string name="NoRatingsFoundMsg">No Ratings Found!...</string>
+    <string name="NoBuyersFoundMsg">No Buyers Found!...</string>
+    <string name="RatingDoneMsg">Thanks For Rating</string>
+    <string name="NoMapFoundMsg">No Map Available</string>
+    <string name="NoStatesFoundMsg">No State List Found</string>
+    <string name="NoDistrictsFoundMsg">No Districts Found In Selected State</string>
+    <string name="NoTaluksFoundMsg">No Taluks Found In Selected District</string>
+    <string name="NoInternetMsg">No Internet Connection. Try Again?</string>
+    <string name="NoIntentMsg">No Intent Data Received!...</string>
+    <string name="ErrorSharedPrefStorageMsg">Error Storing Session Preference ?...</string>
+    <string name="NoResponseFromServerMsg">No Response From Server?</string>
+    <string name="InvalidResponseFromServerMsg">Invalid Response From Server?</string>
+
+
+
+
+    <string name="WebServiceURLStateList">http://b2bapi.login2print.com/api/Registration/GetStates</string>
+    <string name="WebServiceURLRegister">http://b2bapi.login2print.com/api/Registration/RegisterCustomer</string>
+
 </resources>

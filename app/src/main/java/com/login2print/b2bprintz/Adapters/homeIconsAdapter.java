@@ -28,9 +28,9 @@ import java.util.List;
 public class homeIconsAdapter extends BaseAdapter {
     private final List<Item> mItems = new ArrayList<Item>();
     private final LayoutInflater mInflater;
-    private String[] iconTitles;
+    //private String[] iconTitles;
     private String[] iconImages;
-    private String[] iconBGColor;
+    //private String[] iconBGColor;
     private String[] activities;
 
     private LruCache<String, Bitmap> mMemoryCache;
@@ -42,15 +42,15 @@ public class homeIconsAdapter extends BaseAdapter {
     public homeIconsAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
         mContext  = context;
-        iconTitles  = context.getResources().getStringArray(R.array.homeIconsTitle);
+        //iconTitles  = context.getResources().getStringArray(R.array.homeIconsTitle);
         iconImages  = context.getResources().getStringArray(R.array.homeIconsImages);
-        iconBGColor  = context.getResources().getStringArray(R.array.homeIconsBGColor);
+        //iconBGColor  = context.getResources().getStringArray(R.array.homeIconsBGColor);
         activities  = context.getResources().getStringArray(R.array.homeIconsActivities);
         //projectURLS    = context.getResources().getStringArray(R.array.homeIconsURL);
 
         for(int i=0; i<iconImages.length;i++) {
             int resourceID = context.getResources().getIdentifier(iconImages[i], "drawable", context.getPackageName());
-            mItems.add(new Item(iconTitles[i],   resourceID, iconBGColor[i], activities[i]));
+            mItems.add(new Item(resourceID, activities[i]));
         }
 
     }
@@ -71,15 +71,15 @@ public class homeIconsAdapter extends BaseAdapter {
     }
 
     private static class Item {
-        public final String name;
+        //public final String name;
         public final int drawableId;
-        public final String bgColor;
+       // public final String bgColor;
         public final String Activities;
 
-        Item(String name, int drawableId, String bgColor, String Activities) {
-            this.name = name;
+        Item( int drawableId, String Activities) {
+            //this.name = name;
             this.drawableId = drawableId;
-            this.bgColor = bgColor;
+            //this.bgColor = bgColor;
             this.Activities = Activities;
         }
     }
@@ -99,7 +99,7 @@ public class homeIconsAdapter extends BaseAdapter {
 
         picture = (ImageView) v.getTag(R.id.picture);
         //name = (TextView) v.getTag(R.id.text);
-        frame = (FrameLayout) v.getTag(R.id.frame);
+        ///frame = (FrameLayout) v.getTag(R.id.frame);
 
         Item item = getItem(i);
 
@@ -108,34 +108,16 @@ public class homeIconsAdapter extends BaseAdapter {
         Picasso.with(mContext).load(R.mipmap.ic_launcher).into(picture);
         switch(i){
             case 0:
-                Picasso.with(mContext).load(R.drawable.order).into(picture);
+                Picasso.with(mContext).load(R.drawable.cashback_home_icon).into(picture);
                 break;
             case 1:
-                Picasso.with(mContext).load(R.drawable.neworder).into(picture);
+                Picasso.with(mContext).load(R.drawable.filepending_home_icon).into(picture);
                 break;
             case 2:
-                //Picasso.with(mContext).load(R.drawable.web_browser).into(picture);
-                Picasso.with(mContext).load(R.drawable.cancelledorder).into(picture);
+                Picasso.with(mContext).load(R.drawable.outstandingbalance_home_icon).into(picture);
                 break;
             case 3:
-                Picasso.with(mContext).load(R.drawable.paymentpending).into(picture);
-                break;
-            case 4:
-                Picasso.with(mContext).load(R.drawable.paymenttickets).into(picture);
-                //Picasso.with(mContext).load(R.drawable.personal_info).into(picture);
-                break;
-            case 5:
-                Picasso.with(mContext).load(R.drawable.cancelledtickets).into(picture);
-                //Picasso.with(mContext).load(R.drawable.photo_capture).into(picture);
-                break;
-            case 6:
-                Picasso.with(mContext).load(R.drawable.notifications).into(picture);
-                break;
-            case 7:
-                Picasso.with(mContext).load(R.drawable.cashback).into(picture);
-                break;
-            case 8:
-                Picasso.with(mContext).load(R.drawable.profile).into(picture);
+                Picasso.with(mContext).load(R.drawable.notifications_home_icon).into(picture);
                 break;
 
 
@@ -161,7 +143,7 @@ public class homeIconsAdapter extends BaseAdapter {
                         //playBellSound();
                         Intent intent=null;
                         try {
-                            intent = new Intent(mContext,  Class.forName(mContext.getPackageName()+"."+activities[position]));
+                            intent = new Intent(mContext,  Class.forName(mContext.getPackageName()+".Orders."+activities[position]));
                         } catch (ClassNotFoundException e) {
                             e.printStackTrace();
                         }

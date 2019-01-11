@@ -23,6 +23,9 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.login2print.b2bprintz.Adapters.homeIconsAdapter;
+import com.login2print.b2bprintz.Orders.OrdersDashboardActivity;
+import com.login2print.b2bprintz.Payments.PaymentsActivity;
+import com.login2print.b2bprintz.Payments.PaymentsApprovedActivity;
 
 import java.util.HashMap;
 
@@ -55,14 +58,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         gridView.setAdapter(new homeIconsAdapter(this));
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -128,8 +123,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-       if(id == R.id.profile){
+       if(id == R.id.navPayments){
+            Intent profileIntent = new Intent(this, PaymentsActivity.class);
+            startActivity(profileIntent);
+        } else if(id == R.id.navOrders){
+            Intent profileIntent = new Intent(this, OrdersDashboardActivity.class);
+            startActivity(profileIntent);
+        }else if(id == R.id.navProfile){
            Intent profileIntent = new Intent(this, Profile1Activity.class);
+           startActivity(profileIntent);
+       }else if(id == R.id.navTransactions){
+           Intent profileIntent = new Intent(this, TransactionsActivity.class);
+           startActivity(profileIntent);
+       }else if(id == R.id.navPricelist){
+           Intent profileIntent = new Intent(this, PricelistActivity.class);
            startActivity(profileIntent);
        }
 

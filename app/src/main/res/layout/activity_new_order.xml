@@ -8,7 +8,7 @@
     android:background="#f1f1f1"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    tools:context="com.login2print.b2bprintz.NewOrderActivity">
+    tools:context="com.login2print.b2bprintz.Orders.NewOrderActivity">
 
     <include
         layout="@layout/app_bar_new_order"

@@ -6,4 +6,8 @@
 
     <color name="SplashScreenBGColor">#EEEEEE</color>
 
+
+    <color name="screenBGColor">#2d4565</color>
+    <color name="screenHeadingColor">#ffffff</color>
+    <color name="formFieldsHintColor">#bbbbbb</color>
 </resources>

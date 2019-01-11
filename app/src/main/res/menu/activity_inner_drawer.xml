@@ -5,42 +5,37 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/estimates"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Estimates" />
+            android:id="@+id/navTransactions"
+            android:icon="@drawable/ic_transactions_24dp"
+            android:title="Transactions" />
         <item
-            android:id="@+id/orders"
-            android:icon="@drawable/ic_menu_gallery"
+            android:id="@+id/navOrders"
+            android:icon="@drawable/ic_menu_orders_24dp"
             android:title="Orders" />
         <item
-            android:id="@+id/payments"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:id="@+id/navPayments"
+            android:icon="@drawable/ic_menu_payment_24dp"
             android:title="Payments" />
         <item
-            android:id="@+id/pricelist"
-            android:icon="@drawable/ic_menu_manage"
+            android:id="@+id/navPricelist"
+            android:icon="@drawable/ic_menu_pricelist_24dp"
             android:title="Pricelist" />
 
         <item
-            android:id="@+id/profile"
-            android:icon="@drawable/ic_menu_manage"
+            android:id="@+id/navProfile"
+            android:icon="@drawable/ic_menu_account_24dp"
             android:title="Profile" />
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/navShare"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-
-            <item
-                android:id="@+id/logout"
-                android:icon="@drawable/ic_menu_send"
+             <item
+                android:id="@+id/navLogout"
+                android:icon="@drawable/ic_menu_logout_24dp"
                 android:title="Logout" />
         </menu>
     </item>

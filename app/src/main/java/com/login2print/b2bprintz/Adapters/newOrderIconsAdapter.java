@@ -39,7 +39,7 @@ public class newOrderIconsAdapter extends BaseAdapter {
         mInflater = LayoutInflater.from(context);
         mContext  = context;
         iconImages  = context.getResources().getStringArray(R.array.newOrderIconsImages);
-        activities  = context.getResources().getStringArray(R.array.newOrderActivities);
+        activities  = context.getResources().getStringArray(R.array.newOrderIconsActivities);
         //projectURLS    = context.getResources().getStringArray(R.array.homeIconsURL);
 
         for(int i=0; i<iconImages.length;i++) {
@@ -137,7 +137,7 @@ public class newOrderIconsAdapter extends BaseAdapter {
                         //playBellSound();
                         Intent intent=null;
                         try {
-                            intent = new Intent(mContext,  Class.forName(mContext.getPackageName()+"."+activities[position]));
+                            intent = new Intent(mContext,  Class.forName(mContext.getPackageName()+".Orders.NewOrders."+activities[position]));
                         } catch (ClassNotFoundException e) {
                             e.printStackTrace();
                         }

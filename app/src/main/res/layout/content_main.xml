@@ -31,16 +31,39 @@
         android:layout_above="@+id/navigation"
         android:stretchMode="columnWidth" />
 
-    <android.support.design.widget.BottomNavigationView
+    <RelativeLayout
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
+        android:padding="6dp"
+        android:background="#2d4565">
 
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/navigation" />
+        <ImageView
+            android:id="@+id/facebook"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/fb_icon_white"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/wa_icon_white" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/call_icon_white" />
+    </RelativeLayout>
 
 
 </RelativeLayout>
